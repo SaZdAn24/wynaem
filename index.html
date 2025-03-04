@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wynaim</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="toggleMenu.css">
+
 </head>
 <body>
-    
-</body>
+    <header class="header">
+        <div class="logo">
+            <span>pro</span>
+            <span>beaty</span>
+            <span>rent</span>
+        </div>
+        <nav class="nav">
+            <a href="#">OFERTA</a>
+            <a href="#">KONTAKT</a>
+            <a href="#">Q&A</a>
+        </nav>
+        <a href="#" class="button">wynajec</a>
+        <div class="burger" onclick="toggleMenu()">☰</div>
+        
+        <div class="menu" id="menu">
+            <a href="#" onclick="toggleMenu()">OFERTA</a><br>
+            <a href="#" onclick="toggleMenu()">KONTAKT</a><br>
+            <a href="#" onclick="toggleMenu()">Q&A</a><br>
+            <a href="#" class="button" onclick="toggleMenu()">wynajec</a>
+        </div>
+    </header>
+    <script src="toggleMenu.js"></script>
+  </body>
 </html>
