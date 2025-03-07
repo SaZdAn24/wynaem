@@ -2,7 +2,7 @@
 #nasza-oferta {
     text-align: center;
     background-color: #fff;
-    padding: 40px 20px;
+    margin-top: 100px;
 }
 
 .oferta-title {
@@ -12,7 +12,7 @@
 
 .oferta-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Теперь 4 карточки в ряду */
+    grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряду */
     gap: 20px;
     justify-content: center;
     padding: 20px;
@@ -28,6 +28,11 @@
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Обеспечивает, чтобы элементы располагались равномерно */
+    height: 100%;
 }
 
 .oferta-product:hover {
@@ -40,6 +45,7 @@
     max-width: 250px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    margin-bottom: 15px; /* Отступ снизу, чтобы не было наложения на другие элементы */
 }
 
 .oferta-product img:hover {
@@ -55,12 +61,30 @@
 .oferta-price {
     font-size: 16px;
     color: #000;
+    margin-bottom: 15px; /* Отступ снизу, чтобы цена не накладывалась на кнопку */
 }
 
 .oferta-old-price {
     text-decoration: line-through;
     color: gray;
     margin-left: 5px;
+}
+
+.wiemcej-button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #b0d9ed;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center; /* Выравнивание кнопки по центру */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.wiemcej-button:hover {
+    background-color: #9ac4d6;
 }
 
 /* Стили для модального окна */
@@ -86,8 +110,11 @@
 }
 
 .oferta-modal-content img {
-    max-width: 80%;
-    margin-bottom: 20px;
+    max-width: 300px;  
+    max-height: 450px; 
+    width: 100%;       
+    height: auto;     
+    margin: 0 auto; 
 }
 
 .oferta-close {
@@ -101,10 +128,14 @@
 /* Адаптив для мобильных устройств */
 @media (max-width: 768px) {
     .oferta-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряду на мобильных */
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     .oferta-product {
         padding: 10px;
+    }
+
+    .oferta-modal-content {
+        width: 80%; 
     }
 }

@@ -97,4 +97,15 @@ body {
     .burger {
         display: block;
     }
+    .logo {
+        font-size: 18px; 
+        margin-left: 20px; 
+        text-align: left; 
+        gap: 2px; 
+        margin-bottom: 70px; 
+    }
+
+    .logo span {
+        display: block; 
+    }
 }

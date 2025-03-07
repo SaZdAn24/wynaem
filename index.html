@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="text.css">
     <link rel="stylesheet" href="oferta.css">
     <link rel="stylesheet" href="qaSection.css">
+    <link rel="stylesheet" href="form.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 
@@ -48,61 +49,69 @@
             <button class="rent-button">Wynajmuj</button>
         </div>
     </div>
-    <section id="nasza-oferta">
-        <h1 class="oferta-title">Nasza Oferta</h1>
-    
-        <div class="oferta-grid">
-            <div class="oferta-product" onclick="openOfertaModal('PrimeLaser', 'Nowoczesny laser do usuwania owłosienia.', 'img1.jpg')">
-                <img src="./assets/laser.jpg" alt="PrimeLaser">
-                <p class="oferta-name">PrimeLaser</p>
-                <p class="oferta-price"><strong>€1000</strong> <span class="oferta-old-price">€2 100</span></p>
-            </div>
-    
-            <div class="oferta-product" onclick="openOfertaModal('Hydrafacial', 'Profesjonalne urządzenie do pielęgnacji skóry.', 'img2.jpg')">
-                <img src="./assets/hudrafacial.jpg" alt="Hydrafacial">
-                <p class="oferta-name">Hydrafacial</p>
-                <p class="oferta-price"><strong>€1 990</strong></p>
-            </div>
-    
-            <div class="oferta-product" onclick="openOfertaModal('Endosfera', 'Urządzenie do masażu i terapii ciała.', 'img3.jpg')">
-                <img src="./assets/endosfera.jpeg" alt="Endosfera">
-                <p class="oferta-name">Endosfera</p>
-                <p class="oferta-price"><strong>€1 490</strong> <span class="oferta-old-price">€1 790</span></p>
-            </div>
-    
-            <div class="oferta-product" onclick="openOfertaModal('Lumecca', 'Nowoczesna technologia leczenia skóry.', 'img4.jpg')">
-                <img src="./assets/lumecca.jpg" alt="Lumecca">
-                <p class="oferta-name">Lumecca</p>
-                <p class="oferta-price"><strong>€1 750</strong> <span class="oferta-old-price">€2 000</span></p>
-            </div>
-    
-            <div class="oferta-product" onclick="openOfertaModal('Observ520x', 'Profesjonalne urządzenie do analizy skóry.', 'img5.jpg')">
-                <img src="./assets/observ520x.jpg" alt="Observ520x">
-                <p class="oferta-name">Observ520x</p>
-                <p class="oferta-price"><strong>€2 300</strong></p>
-            </div>
-    
-            <div class="oferta-product" onclick="openOfertaModal('RFsecret2.0', 'Urządzenie RF do terapii skóry.', 'img6.jpg')">
-                <img src="./assets/RFsecret2.0.jpg" alt="RFsecret2.0">
-                <p class="oferta-name">RFsecret2.0</p>
-                <p class="oferta-price"><strong>€1 600</strong> <span class="oferta-old-price">€2 000</span></p>
-            </div>
-    
-            <div class="oferta-product" onclick="openOfertaModal('Dermapen', 'Nowoczesny system mikroigłowy.', 'img7.jpg')">
-                <img src="./assets/Dermapen_01.png" alt="Dermapen">
-                <p class="oferta-name">Dermapen</p>
-                <p class="oferta-price"><strong>€1 100</strong> <span class="oferta-old-price">€1 400</span></p>
-            </div>
-    
-            <div class="oferta-product" onclick="openOfertaModal('Exilis', 'Nowoczesne urządzenie do redukcji tkanki tłuszczowej.', 'img8.jpg')">
-                <img src="./assets/exilis.jpg" alt="Exilis">
-                <p class="oferta-name">Exilis</p>
-                <p class="oferta-price"><strong>€1 200</strong> <span class="oferta-old-price">€1 500</span></p>
-            </div>
+   <section id="nasza-oferta">
+    <h1 class="oferta-title">Nasza Oferta</h1>
+
+    <div class="oferta-grid">
+        <div class="oferta-product">
+            <img src="./assets/laser.jpg" alt="PrimeLaser">
+            <p class="oferta-name">PrimeLaser</p>
+            <p class="oferta-price"><strong>€1000</strong> <span class="oferta-old-price">€2 100</span></p>
+            <button class="wiemcej-button" onclick="openOfertaModal('PrimeLaser', 'Nowoczesny laser do usuwania owłosienia.', './assets/laser.jpg')">Więcej</button>
         </div>
-    </section>
-    
-        <!-- Модальное окно -->
+
+        <div class="oferta-product">
+            <img src="./assets/hudrafacial.jpg" alt="Hydrafacial">
+            <p class="oferta-name">Hydrafacial</p>
+            <p class="oferta-price"><strong>€1 990</strong></p>
+            <button class="wiemcej-button" onclick="openOfertaModal('Hydrafacial', 'Profesjonalne urządzenie do pielęgnacji skóry.', './assets/hudrafacial.jpg')">Więcej</button>
+        </div>
+
+        <div class="oferta-product">
+            <img src="./assets/endosfera.jpeg" alt="Endosfera">
+            <p class="oferta-name">Endosfera</p>
+            <p class="oferta-price"><strong>€1 490</strong> <span class="oferta-old-price">€1 790</span></p>
+            <button class="wiemcej-button" onclick="openOfertaModal('Endosfera', 'Urządzenie do masażu i terapii ciała.', './assets/endosfera.jpeg')">Więcej</button>
+        </div>
+
+        <div class="oferta-product">
+            <img src="./assets/lumecca.jpg" alt="Lumecca">
+            <p class="oferta-name">Lumecca</p>
+            <p class="oferta-price"><strong>€1 750</strong> <span class="oferta-old-price">€2 000</span></p>
+            <button class="wiemcej-button" onclick="openOfertaModal('Lumecca', 'Nowoczesna technologia leczenia skóry.', './assets/lumecca.jpg')">Więcej</button>
+        </div>
+
+        <div class="oferta-product">
+            <img src="./assets/observ520x.jpg" alt="Observ520x">
+            <p class="oferta-name">Observ520x</p>
+            <p class="oferta-price"><strong>€2 300</strong></p>
+            <button class="wiemcej-button" onclick="openOfertaModal('Observ520x', 'Profesjonalne urządzenie do analizy skóry.', './assets/observ520x.jpg')">Więcej</button>
+        </div>
+
+        <div class="oferta-product">
+            <img src="./assets/RFsecret2.0.jpg" alt="RFsecret2.0">
+            <p class="oferta-name">RFsecret2.0</p>
+            <p class="oferta-price"><strong>€1 600</strong> <span class="oferta-old-price">€2 000</span></p>
+            <button class="wiemcej-button" onclick="openOfertaModal('RFsecret2.0', 'Urządzenie RF do terapii skóry.', './assets/RFsecret2.0.jpg')">Więcej</button>
+        </div>
+
+        <div class="oferta-product">
+            <img src="./assets/Dermapen_01.png" alt="Dermapen">
+            <p class="oferta-name">Dermapen</p>
+            <p class="oferta-price"><strong>€1 100</strong> <span class="oferta-old-price">€1 400</span></p>
+            <button class="wiemcej-button" onclick="openOfertaModal('Dermapen', 'Nowoczesny system mikroigłowy.', './assets/Dermapen_01.png')">Więcej</button>
+        </div>
+
+        <div class="oferta-product">
+            <img src="./assets/exilis.jpg" alt="Exilis">
+            <p class="oferta-name">Exilis</p>
+            <p class="oferta-price"><strong>€1 200</strong> <span class="oferta-old-price">€1 500</span></p>
+            <button class="wiemcej-button" onclick="openOfertaModal('Exilis', 'Nowoczesne urządzenie do redukcji tkanki tłuszczowej.', './assets/urzadzenie-dermapen-40-3.jpg')">Więcej</button>
+        </div>
+    </div>
+</section>
+
+  <!-- Модальное окно -->
         <div id="oferta-modal" class="oferta-modal">
             <div class="oferta-modal-content">
                 <span class="oferta-close" onclick="closeOfertaModal()">&times;</span>
@@ -144,8 +153,25 @@
             </div>
         </div>
     </section>
-    
-    
+    <div class="wrapper"> 
+        <div class="form-container">
+            <form class="rental-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email">
+                
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Full Name">
+                
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Your Phone">
+                
+                <label for="comments">Comments</label>
+                <textarea id="comments" placeholder="Your Comments"></textarea>
+                
+                <button type="submit">Wynajmuj</button>
+            </form>
+        </div>
+    </div>
     <script src="toggleMenu.js"></script>
     <script src="oferta.js"></script>
   </body>

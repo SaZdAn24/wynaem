@@ -1,8 +1,10 @@
-/* Стили для блока QA */
+/* Блок QA */
 #qa-section {
     text-align: center;
     padding: 80px 0;
     font-family: Arial, sans-serif;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .qa-title {
@@ -14,22 +16,21 @@
 
 .qa-item {
     display: flex;
-    align-items: flex-start; /* Для выравнивания по верхнему краю */
-    justify-content: flex-start; /* Чтобы текст не вылезал вбок */
+    align-items: center; 
+    justify-content: flex-start;
     max-width: 900px;
     margin: 0 auto 40px;
     text-align: left;
     padding: 30px;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Дает возможность элементам переноситься на новую строку */
+    flex-wrap: nowrap; 
 }
 
 .qa-number {
     width: 60px;
     height: 60px;
-    border: 3px solid black;
+    border: 3px solid #add8e6;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -38,74 +39,68 @@
     font-weight: bold;
     margin-right: 25px;
     flex-shrink: 0;
+    color: #ADD8E6;
 }
 
 .qa-content {
-    flex-grow: 1; /* Чтобы текст занимал оставшееся пространство */
-    max-width: calc(100% - 90px); /* Чтобы избежать сдвига */
+    flex-grow: 1;
+    max-width: 800px;
 }
 
-.qa-content h2 {
-    font-size: 26px;
-    font-weight: bold;
-    margin: 0 0 10px;
-}
-
-.qa-content p {
-    font-size: 18px;
-    color: #555;
-    line-height: 1.6;
-}
-
-/* Адаптивные стили для мобильных устройств */
+/* Адаптив для планшетов */
 @media screen and (max-width: 768px) {
     .qa-title {
-        font-size: 30px; /* Уменьшаем размер заголовка на мобильных устройствах */
+        font-size: 30px;
         margin-bottom: 40px;
     }
 
     .qa-item {
-        flex-direction: column; /* Размещаем элементы вертикально */
-        padding: 20px; /* Уменьшаем отступы для мобильных */
-        text-align: center; /* Центрируем текст */
-    }
-
-    .qa-number {
-        margin-bottom: 15px; /* Добавляем отступ снизу для номера */
-        margin-right: 0; /* Убираем отступ справа */
-    }
-
-    .qa-content h2 {
-        font-size: 22px; /* Уменьшаем размер заголовка */
-        margin-bottom: 10px;
-    }
-
-    .qa-content p {
-        font-size: 16px; /* Уменьшаем размер текста */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .qa-title {
-        font-size: 24px; /* Еще больше уменьшаем размер заголовка */
-        margin-bottom: 30px;
-    }
-
-    .qa-item {
-        padding: 15px; /* Еще меньше отступы */
+        flex-direction: row; 
+        align-items: center;
+        text-align: left;
+        padding: 20px;
     }
 
     .qa-number {
         width: 50px;
         height: 50px;
-        font-size: 18px; /* Уменьшаем размер номера */
+        font-size: 20px;
+        margin-bottom: 0;
     }
 
     .qa-content h2 {
-        font-size: 20px; /* Уменьшаем размер заголовка */
+        font-size: 22px;
     }
 
     .qa-content p {
-        font-size: 14px; /* Уменьшаем размер текста */
+        font-size: 16px;
+    }
+}
+
+/* Адаптив для мобильных (до 480px) */
+@media screen and (max-width: 480px) {
+    .qa-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .qa-item {
+        flex-direction: row; 
+        align-items: center;
+        padding: 15px;
+    }
+
+    .qa-number {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .qa-content h2 {
+        font-size: 20px;
+    }
+
+    .qa-content p {
+        font-size: 14px;
     }
 }
