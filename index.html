@@ -22,18 +22,18 @@
             <span>rent</span>
         </div>
         <nav class="nav">
-            <a href="#">OFERTA</a>
-            <a href="#">KONTAKT</a>
-            <a href="#">Q&A</a>
+            <a href="#nasza-oferta">OFERTA</a>
+            <a href="#contact-form">KONTAKT</a>
+            <a href="#qa-section">Q&A</a>
         </nav>
-        <a href="#" class="button">wynajec</a>
+        <a href="contact-form" class="button">wynajec</a>
         <div class="burger" onclick="toggleMenu()">☰</div>
         
         <div class="menu" id="menu">
-            <a href="#" onclick="toggleMenu()">OFERTA</a><br>
-            <a href="#" onclick="toggleMenu()">KONTAKT</a><br>
-            <a href="#" onclick="toggleMenu()">Q&A</a><br>
-            <a href="#" class="button" onclick="toggleMenu()">wynajec</a>
+            <a href="#nasza-oferta" onclick="toggleMenu()">OFERTA</a><br>
+            <a href="#contact-form" onclick="toggleMenu()">KONTAKT</a><br>
+            <a href="#qa-section" onclick="toggleMenu()">Q&A</a><br>
+            <a href="#contact-form" class="button" onclick="toggleMenu()">wynajec</a>
         </div>
     </header>
     <div class="conteiner-main">
@@ -46,19 +46,19 @@
             <div class="features">
                 Nowoczesne urządzenia | Elastyczne warunki | Dostawa do Twojego salonu
             </div>
-            <button class="rent-button">Wynajmuj</button>
+            <button href="#contact-form" class="rent-button">Wynajmuj</button>
         </div>
     </div>
    <section id="nasza-oferta">
     <h1 class="oferta-title">Nasza Oferta</h1>
 
     <div class="oferta-grid">
-        <div class="oferta-product">
-            <img src="./assets/laser.jpg" alt="PrimeLaser">
-            <p class="oferta-name">PrimeLaser</p>
-            <p class="oferta-price"><strong>€1000</strong> <span class="oferta-old-price">€2 100</span></p>
-            <button class="wiemcej-button" onclick="openOfertaModal('PrimeLaser', 'Nowoczesny laser do usuwania owłosienia.', './assets/laser.jpg')">Więcej</button>
-        </div>
+   <div class="oferta-product">
+    <img src="./assets/laser.jpg" alt="PrimeLaser">
+    <p class="oferta-name">PrimeLaser</p>
+    <p class="oferta-price"><strong>€1000</strong> <span class="oferta-old-price">€2 100</span></p>
+    <button class="wiemcej-button" onclick="openOfertaModal('PrimeLaser', 'Arenada aparatu dla laserowej depilacji PrimaLaser. Oferujemy wynajem aparatu PrimaLaser do profesjonalnej depilacji laserowej. Nadaje się do użytku w salonach urody, gabinetach kosmetycznych oraz przez mobilnych kosmetologów.\n\nSpecyfikacje techniczne:\n- Diodowy laser, długość fali 810 nm\n- Energia do 120 J\n- System chłodzenia dla minimalizacji bólu\n\nZalety:\n- Szybkie i skuteczne usuwanie włosów\n- Bezpieczeństwo i komfort dla klientów\n- Odpowiedni dla wszystkich typów skóry i włosów\n\nWarunki wynajmu:\n- Elastyczne terminy wynajmu\n- W wynajmie zawarte są wszystkie niezbędne materiały eksploatacyjne i wsparcie techniczne\n- Koszt wynajmu na zapytanie.', './assets/laser.jpg')">Więcej</button>
+</div>
 
         <div class="oferta-product">
             <img src="./assets/hudrafacial.jpg" alt="Hydrafacial">
@@ -153,7 +153,7 @@
             </div>
         </div>
     </section>
-    <div class="wrapper"> 
+    <div id="contact-form" class="wrapper"> 
         <div class="form-container">
             <form class="rental-form">
                 <label for="email">Email</label>
