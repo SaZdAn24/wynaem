@@ -12,7 +12,7 @@
 
 .oferta-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 карточки в ряду */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     justify-content: center;
     padding: 20px;
@@ -23,7 +23,7 @@
 .oferta-product {
     cursor: pointer;
     text-align: center;
-    background-color: #f9f9f9; /* Добавил светлый фон для карточек */
+    background-color: #f9f9f9;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -31,7 +31,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Обеспечивает, чтобы элементы располагались равномерно */
+    justify-content: space-between;
     height: 100%;
 }
 
@@ -45,7 +45,7 @@
     max-width: 250px;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    margin-bottom: 15px; /* Отступ снизу, чтобы не было наложения на другие элементы */
+    margin-bottom: 15px;
 }
 
 .oferta-product img:hover {
@@ -61,7 +61,7 @@
 .oferta-price {
     font-size: 16px;
     color: #000;
-    margin-bottom: 15px; /* Отступ снизу, чтобы цена не накладывалась на кнопку */
+    margin-bottom: 15px;
 }
 
 .oferta-old-price {
@@ -79,8 +79,8 @@
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
-    align-self: center; /* Выравнивание кнопки по центру */
-    margin-top: 10px; /* Отступ сверху */
+    align-self: center;
+    margin-top: 10px;
 }
 
 .wiemcej-button:hover {
@@ -97,24 +97,30 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .oferta-modal-content {
     background-color: #fff;
-    margin: 10% auto;
     padding: 20px;
     border-radius: 10px;
     width: 50%;
+    max-height: 80vh;
+    overflow-y: auto;
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .oferta-modal-content img {
-    max-width: 300px;  
-    max-height: 450px; 
-    width: 100%;       
-    height: auto;     
-    margin: 0 auto; 
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .oferta-close {
@@ -125,10 +131,27 @@
     cursor: pointer;
 }
 
+.button-modal {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #b0d9ed;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.button-modal {
+    cursor: pointer !important;
+}
+
 /* Адаптив для мобильных устройств */
 @media (max-width: 768px) {
     .oferta-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряду на мобильных */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .oferta-product {
@@ -136,6 +159,6 @@
     }
 
     .oferta-modal-content {
-        width: 80%; /* Увеличиваем ширину модального окна на мобильных устройствах */
+        width: 80%;
     }
 }
