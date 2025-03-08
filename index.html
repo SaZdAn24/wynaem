@@ -31,7 +31,7 @@
             <a href="#contact-form">KONTAKT</a>
             <a href="#qa-section">Q&A</a>
         </nav>
-        <a href="contact-form" class="button">wynajec</a>
+        <a href="#contact-form" class="button">wynajec</a>
         <div class="burger" onclick="toggleMenu()">☰</div>
         
         <div class="menu" id="menu">
@@ -51,7 +51,7 @@
             <div class="features">
                 Nowoczesne urządzenia | Elastyczne warunki | Dostawa do Twojego salonu
             </div>
-            <button href="#contact-form" class="rent-button">Wynajmuj</button>
+            <button onclick="window.location.href='#contact-form'" class="rent-button">Wynajmuj</button>
         </div>
     </div>
    <section id="nasza-oferta">
@@ -65,12 +65,26 @@
     <button class="wiemcej-button" onclick="openOfertaModal('PrimeLaser', 'Arenada aparatu dla laserowej depilacji PrimaLaser. Oferujemy wynajem aparatu PrimaLaser do profesjonalnej depilacji laserowej. Nadaje się do użytku w salonach urody, gabinetach kosmetycznych oraz przez mobilnych kosmetologów.\n\nSpecyfikacje techniczne:\n- Diodowy laser, długość fali 810 nm\n- Energia do 120 J\n- System chłodzenia dla minimalizacji bólu\n\nZalety:\n- Szybkie i skuteczne usuwanie włosów\n- Bezpieczeństwo i komfort dla klientów\n- Odpowiedni dla wszystkich typów skóry i włosów\n\nWarunki wynajmu:\n- Elastyczne terminy wynajmu\n- W wynajmie zawarte są wszystkie niezbędne materiały eksploatacyjne i wsparcie techniczne\n- Koszt wynajmu na zapytanie.', './assets/laser.jpg')">Więcej</button>
 </div>
 
-        <div class="oferta-product">
-            <img src="./assets/hudrafacial.jpg" alt="Hydrafacial">
-            <p class="oferta-name">Hydrafacial</p>
-            <p class="oferta-price"><strong>€1 990</strong></p>
-            <button class="wiemcej-button" onclick="openOfertaModal('Hydrafacial', 'Profesjonalne urządzenie do pielęgnacji skóry.', './assets/hudrafacial.jpg')">Więcej</button>
-        </div>
+<div class="oferta-product">
+    <img src="./assets/hudrafacial.jpg" alt="Hydrafacial">
+    <p class="oferta-name">Hydrafacial</p>
+    <p class="oferta-price"><strong>€1 990</strong></p>
+    <button class="wiemcej-button" onclick="openOfertaModal(
+        'Hydrafacial', 
+        'Hydrafacial to nowoczesny zabieg pielęgnacyjny oparty na technologii próżniowego hydropeelingu. Łączy oczyszczanie, złuszczanie, nawilżanie i odżywianie skóry.<br><br>' + 
+        'Jak działa?<br>' +
+        '• Oczyszczanie i złuszczanie – usunięcie martwych komórek i nadmiaru sebum.<br>' +
+        '• Peeling kwasowy – delikatne złuszczanie bez podrażnień.<br>' +
+        '• Ekstrakcja próżniowa – oczyszczanie porów.<br>' +
+        '• Nawilżanie i odżywienie – aplikacja serum z antyoksydantami i kwasem hialuronowym.<br><br>' +
+        'Zalety Hydrafacial:<br>' +
+        '✔ Odpowiedni dla każdego typu skóry<br>' +
+        '✔ Bezpieczny i bezbolesny<br>' +
+        '✔ Nawilża, wygładza i rozświetla skórę.<br><br>' +
+        'Hydrafacial to szybki sposób na zdrową i promienną cerę!', 
+        './assets/hudrafacial.jpg')">Więcej</button>
+</div>
+
 
         <div class="oferta-product">
             <img src="./assets/endosfera.jpeg" alt="Endosfera">
@@ -184,5 +198,7 @@
     <script src="toggleMenu.js"></script>
     <script src="oferta.js"></script>
     <script src="skrollButton.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="form.js"></script>
   </body>
 </html>
