@@ -1,0 +1,43 @@
+/* Стили для кнопки, которая будет следовать за скроллингом */
+.scroll-to-form-button {
+    padding: 10px 20px;
+    background-color: #b0d9ed;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    align-self: center;
+    margin-top: 10px;
+    position: fixed;
+    bottom: 50px;
+    right: 120px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease; /* Добавляем плавное исчезновение */
+}
+
+/* Эффект при наведении */
+.scroll-to-form-button:hover {
+    background-color: #9ac4d6;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .scroll-to-form-button {
+        padding: 8px 15px;
+        font-size: 14px;
+        bottom: 25px; /* Поднимем кнопку немного выше, чтобы она не перекрывала контент */
+        right: 15px;
+    }
+}
+
+/* Адаптивность для самых маленьких экранов */
+@media (max-width: 480px) {
+    .scroll-to-form-button {
+        padding: 6px 12px;
+        font-size: 12px;
+        bottom: 10px; /* Еще больше поднимем кнопку */
+        right: 10px;
+    }
+}
