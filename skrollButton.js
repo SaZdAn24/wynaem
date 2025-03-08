@@ -1,10 +1,20 @@
 // Получаем кнопку
 const button = document.querySelector('.scroll-to-form-button');
 
-// Функция для проверки, достиг ли пользователь конца страницы
+// Функция для прокрутки к форме
+function scrollToForm() {
+    const form = document.getElementById("contact-form"); // Получаем форму по id
+    form.scrollIntoView({
+        behavior: 'smooth', 
+        block: 'start'
+    });
+}
+
+// Функция для проверки, достиг ли пользователь конца страницы и скрыть кнопку
 function checkScrollPosition() {
-    const scrollPosition = window.scrollY + window.innerHeight; // Текущая позиция прокрутки
-    const documentHeight = document.documentElement.scrollHeight; // Общая высота документа
+    const button = document.querySelector(".scroll-to-form-button");
+    const scrollPosition = window.scrollY + window.innerHeight; 
+    const documentHeight = document.documentElement.scrollHeight; 
 
     // Если пользователь достиг или почти достиг конца страницы, скрыть кнопку
     if (scrollPosition >= documentHeight - 10) {
@@ -16,6 +26,5 @@ function checkScrollPosition() {
 
 // Слушаем событие прокрутки
 window.addEventListener('scroll', checkScrollPosition);
-
-// Инициализируем проверку на момент загрузки страницы
 checkScrollPosition();
+
